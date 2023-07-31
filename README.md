@@ -28,7 +28,7 @@ It can be used by anybody (Calamarium installer and browser-focused experience f
 Required dependencies: `archiso`, `bash`-compatible shell.  
 After you clone the Git repository:
 
-1. `git submodule sync`
+1. `git submodule sync && cd flexed && cargo build --release && cd ..` (Only if you want to build the OS with Flexed)
 2. `cd build_scripts`
 3. Run one of the `select_X.sh` if you want to customize the image
 4. `./build_iso.sh interactive`
@@ -51,3 +51,11 @@ Flash your drive using something like Balena Etcher.
 
 Plug your drive into your computer, boot it up, select the drive and enter the Live environment.
 From there you can try Flexium or can launch the "Installer" application in order to install on the drive.
+
+## IV. Missing features
+
+- Grafico GUI Suite:
+    - Optional GUI installer (`yay` frontend).
+    - Optional GUI for accessing the Runtime Scripts Collection
+    - Optional GUI for customizing Flexed
+- Installing Flexed without having to compile each time (as Arch package)

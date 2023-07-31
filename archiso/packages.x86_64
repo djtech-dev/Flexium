@@ -1,0 +1,5 @@
+base
+linux-zen
+mkinitcpio
+mkinitcpio-archiso
+syslinux

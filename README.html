@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--<meta name="date" content=''>-->
+    <title>Flexium</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+  </head>
+  <body>
+	<!--<p>Date: </p>-->
+<h1 id="flexium">Flexium</h1>
+<p>Lite web-based rolling release Linux distro, based on Arch Linux and
+the <code>Flexed</code> modular DE. Inspired as a Arch Linux flavour
+that allows for a Chrome OS-like experience, with access to a real
+Linux-based OS.</p>
+<p>It can be used by anybody (Calamarium installer and browser-focused
+experience for beginners, in order to make Flexium an Ubuntu
+alternative; powerusers can use the preinstalled <code>kitty</code> in
+order to access the Arch Linux package manager and the Runtime Scripts
+Collection)</p>
+<h2 id="i.-what-does-it-contain">I. What does it contain?</h2>
+<ul>
+<li><code>pacman</code> and <code>yay</code> for managing packages.
+(Same repositories as Arch Linux)</li>
+<li>The Linux Zen kernel</li>
+<li>GRUB bootloader</li>
+<li>Web Browser (at the moment, there are editions for <a
+href="https://www.mozilla.org/it/firefox/new/">Firefox</a> and <a
+href="https://www.chromium.org/chromium-projects/">Chromium</a>)</li>
+<li><a href="https://sw.kovidgoyal.net/kitty/"><code>kitty</code></a>
+terminal emulator</li>
+<li>Minimalistic custom Desktop Environments (avaiable both on X11 and
+Wayland, independent from the rest of Flexium)</li>
+<li>Fully-sandboxed environments (for better security)</li>
+<li><a href="https://calamares.io/"><code>calamares</code></a>
+installation tool</li>
+<li>Runtime Scripts Collection:
+<ul>
+<li>Scripts for rebuilding Flexium itself</li>
+<li>Scripts for auto-installing <code>rg</code> and <code>fd</code> as
+alternatives to <code>grep</code> and <code>find</code></li>
+<li>Scripts for installing <a
+href="https://github.com/intel/thermal_daemon"><code>thermald</code></a>
+and <a
+href="https://github.com/AdnanHodzic/auto-cpufreq"><code>auto-cpufreq</code></a>
+for better CPU frequency scaling</li>
+<li>Script for installing the Container Android Subsystem (based on <a
+href="https://waydro.id/">waydroid</a>)</li>
+<li>Script to use <code>cpulimit</code> in order to make the Web Browser
+smoother limiting the rest of the OS</li>
+</ul></li>
+<li>Building Scripts Collection:
+<ul>
+<li>Build ISO images (Bootstrap, ISO or Netboot)</li>
+<li>Select X11 or Wayland, Firefox or Chromium, Flexed or KDE.</li>
+</ul></li>
+</ul>
+<h2 id="ii.-how-to-build">II. How to build</h2>
+<p>Required dependencies: <code>archiso</code>,
+<code>bash</code>-compatible shell.<br />
+After you clone the Git repository:</p>
+<ol type="1">
+<li><code>git submodule sync</code></li>
+<li><code>cd build_scripts</code></li>
+<li>Run one of the <code>select_X.sh</code> if you want to customize the
+image</li>
+<li><code>./build_iso.sh interactive</code></li>
+<li>Congratulations! You have built your own image of Flexium.</li>
+</ol>
+<h2 id="iii.-how-to-install">III. How to install</h2>
+<h3 id="iii.i.-get-the-iso">III.I. Get the ISO</h3>
+<p>Either:</p>
+<ul>
+<li>Download from Github Releases</li>
+<li>Build following the instruction above</li>
+</ul>
+<h3 id="iii.ii.-flash-drive">III.II. Flash drive</h3>
+<p>Flash your drive using something like Balena Etcher.</p>
+<h3 id="iii.iii.-run-the-live-os">III.III. Run the Live OS</h3>
+<p>Plug your drive into your computer, boot it up, select the drive and
+enter the Live environment. From there you can try Flexium or can launch
+the “Installer” application in order to install on the drive.</p>
+  </body>
+</html>
